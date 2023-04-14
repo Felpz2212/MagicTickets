@@ -70,12 +70,12 @@ contract MagicNFT {
 
     function createRaffle(uint _maxEntries, uint _minTickets, 
     address _tokenContract, uint _tokenID, uint _ticketValue, address _tokenReceived) public returns(uint){
-        require(_maxEntries > 0, " A ");
-        require(_minTickets > 0, " B ");
-        require(_tokenContract != address(0), " C ");
-        require(_tokenID >= 0, " D ");
-        require(_tokenReceived != address(0), " E ");
-        require(_ticketValue > 0, " F ");
+        require(_maxEntries > 0, "Numero de tickets deve ser maior que zero");
+        require(_minTickets > 0, "Numero minimo de tickets deve ser maior que zero");
+        require(_tokenContract != address(0), "O endereco do contrato NFT deve ser diferente de 0");
+        require(_tokenID >= 0, "O id do token deve ser maior que zero");
+        require(_tokenReceived != address(0), "O endereco do token a ser recebido deve ser diferente de 0");
+        require(_ticketValue > 0, "O valor do ticket deve ser maior que zero");
 
         transferNFT(_tokenID, _tokenContract, msg.sender);
         RaffleStruct memory raffle = RaffleStruct({
@@ -129,12 +129,12 @@ contract MagicNFT {
     }
 
     function cancelRaffle(uint _id) public {
-        require(msg.sender == raffles[_id].seller, " ");
-        require(entries[_id].length == 0, " ");
+        require(msg.sender == raffles[_id].seller, "Apenas o seller pode realizar o cancelamento");
+        require(entries[_id].length == 0, "O raffle nao pode mais ser cancelado");
 
         RaffleStruct storage raffle = raffles[_id];
 
-        require(raffle.status == STATUS.STARTED, " ");
+        require(raffle.status == STATUS.STARTED, "O raffle ja foi finalizado");
 
         address wallet = raffle.seller;
 

@@ -712,9 +712,9 @@
 	},
 	"sources": {
 		"contracts/tokens/Tether.sol": {
-			"keccak256": "0xa3689f7ecbac05d1285b6c35589af008bd9e6de762f9a65208820e9b71e0904b",
+			"keccak256": "0x6b252bc962a16fa94f52d1b11c13769ee80a7542f4336b3021806a28f2d71c09",
 			"urls": [
-				"bzzr://4f89fdd20dbbf86aa1604bd5216a249bcd13255268bde52dfd07970cde6761f4"
+				"bzzr://1c2978e2cd781eaf07b101b387c36df7b146ee1948bd415e19bbf36344aef4aa"
 			]
 		}
 	},

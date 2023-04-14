@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -212,7 +212,7 @@
 		"compilationTarget": {
 			"contracts/MagicTickets/MagicTicketsNFT.sol": "IERC721"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -225,11 +225,11 @@
 	},
 	"sources": {
 		"contracts/MagicTickets/MagicTicketsNFT.sol": {
-			"keccak256": "0x1d167e2bb04b423e4d3e1278b631427d86b48f30edb360f92e967a2332f80925",
+			"keccak256": "0xbed966fdd769b736682a4102cd603055168974242eae722d1c5b860c8ea86597",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://7dbd0695f8412b6d8cefe19ad2cd83818ef24fe3a9156b1cdc8b95248697254c",
-				"dweb:/ipfs/QmQtZvAAXcpiuJAuSGtac5Ax1bQ4paW59rBkbrpY3QhhqV"
+				"bzz-raw://b8c09b5761e3d142ac44a8cd9fed8e68059b46d7636a0bd397d1ecccf690207e",
+				"dweb:/ipfs/QmUWYtEyRh9v6mYqLHPWmtS14n4nRXAUQScarggLZ9aujL"
 			]
 		}
 	},
