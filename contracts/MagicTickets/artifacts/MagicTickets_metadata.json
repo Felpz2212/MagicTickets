@@ -1,0 +1,378 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "raffleID",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "buyer",
+						"type": "address"
+					}
+				],
+				"name": "boughtTickets",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "raffleID",
+						"type": "uint256"
+					}
+				],
+				"name": "canceledRaffle",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "raffleID",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					}
+				],
+				"name": "createdRaffle",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "raffleID",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "winner",
+						"type": "address"
+					}
+				],
+				"name": "drawWinner",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "qtd",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "buyer",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenPay",
+						"type": "address"
+					}
+				],
+				"name": "buyEntry",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelRaffle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxEntries",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minTickets",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenRaffle",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ticketValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenReceived",
+						"type": "address"
+					}
+				],
+				"name": "createRaffle",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "devolution",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "entries",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_player",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "getQtdDisponivel",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "raffles",
+				"outputs": [
+					{
+						"internalType": "enum MagicTickets.STATUS",
+						"name": "_status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_maxEntries",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_minTickets",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountEth",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_seller",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountRaised",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_winner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_qtdDisponivel",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_sitePercentage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenRaffle",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_ticketValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenReceived",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "seed",
+						"type": "string"
+					}
+				],
+				"name": "sortearWinner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MagicTickets/MagicTickets.sol": "MagicTickets"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MagicTickets/MagicTickets.sol": {
+			"keccak256": "0x3c7c3eaf8f84d27d57d33de0aff0bf3786cb19b00649bb9f50d14e59a4d29d90",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://4a7651f6d324bb94d2920f2f5cd1980fbc810bf542e3640b9b6c0a6dbbe9d2b0",
+				"dweb:/ipfs/QmZoX6Uv872S5YzNsbUSZwaEf2YfmoGgQP6XWtsqaRhihQ"
+			]
+		}
+	},
+	"version": 1
+}
