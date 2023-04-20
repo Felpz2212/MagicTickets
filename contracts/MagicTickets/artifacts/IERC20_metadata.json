@@ -78,7 +78,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/MagicTickets/MagicTicketsNFT.sol": "IERC20"
+			"contracts/MagicTickets/MagicTickets.sol": "IERC20"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -92,12 +92,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/MagicTickets/MagicTicketsNFT.sol": {
-			"keccak256": "0xbed966fdd769b736682a4102cd603055168974242eae722d1c5b860c8ea86597",
-			"license": "GPL-3.0",
+		"contracts/MagicTickets/MagicTickets.sol": {
+			"keccak256": "0x3c7c3eaf8f84d27d57d33de0aff0bf3786cb19b00649bb9f50d14e59a4d29d90",
+			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://b8c09b5761e3d142ac44a8cd9fed8e68059b46d7636a0bd397d1ecccf690207e",
-				"dweb:/ipfs/QmUWYtEyRh9v6mYqLHPWmtS14n4nRXAUQScarggLZ9aujL"
+				"bzz-raw://4a7651f6d324bb94d2920f2f5cd1980fbc810bf542e3640b9b6c0a6dbbe9d2b0",
+				"dweb:/ipfs/QmZoX6Uv872S5YzNsbUSZwaEf2YfmoGgQP6XWtsqaRhihQ"
 			]
 		}
 	},
